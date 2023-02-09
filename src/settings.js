@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import Draggable, {DraggableCore} from 'react-draggable';
+import Draggable  from 'react-draggable';
 import AboutComp from './AboutComp';
 import WallpapersComp from './WallpapersComp';
 import { UserContext } from './context';
@@ -7,7 +7,7 @@ import { UserContext } from './context';
 function Settings() {
     console.log('settings callled')
     const [curSetting, setCurSetting] = useState('wallpapers');
-    const {setShowSettings} = useContext(UserContext);
+    const {setShowSettings,zindexindex,updatezindexindex} = useContext(UserContext);
     const handleClose = () => {
       setShowSettings(false);
     }
@@ -16,9 +16,10 @@ function Settings() {
     <Draggable
     bounds="parent"
     handle=".titlebar"
-    >
-      <div className='absolute h-5/6 w-4/6 bg-black flex-col' >
-        <div className='titlebar'  style={{backgroundColor: 'grey', color:'white', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}}>
+    onMouseDown={()=>{updatezindexindex('Settings');console.log(zindexindex)}}>
+
+      <div className='absolute h-5/6 w-4/6 bg-black flex-col' style={{zIndex:  (zindexindex.Settings.toString()) }}>
+        <div className='titlebar' style={{backgroundColor: 'grey', color:'white', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}}>
                    
                    <h1 className='text-center flex-auto'>Settings</h1>
                    <h1 className='hover:cursor-pointer ' onClick={()=>{handleClose()}}>❌</h1>

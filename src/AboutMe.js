@@ -1,15 +1,18 @@
-import React, {useContext, useState} from 'react'
-import Draggable, {DraggableCore} from 'react-draggable';
-import AboutComp from './AboutComp';
+import React, {useContext, useEffect, useState} from 'react'
+import Draggable from 'react-draggable';
 import { UserContext } from './context';
 
 function AboutMe() {
     console.log('settings callled')
     const [curAboutSetting, setCurAboutSetting] = useState('skills');
-    const {setShowAboutMe} = useContext(UserContext);
+    const {setShowAboutMe,zindexindex,updatezindexindex} = useContext(UserContext);
     const handleClose = () => {
         setShowAboutMe(false);
     }
+useEffect(() => {
+  // rerender the AboutMe component when any values in zindexindex change
+
+},[zindexindex])
 const SkillsComp = () => {
     return(
         <div className='bg-gray-900 w-4/5 flex flex-col '>
@@ -93,9 +96,10 @@ const EducationComp = () => {
     <Draggable
     bounds="parent"
     handle=".titlebar"
+    onMouseDown={()=>{updatezindexindex('AboutMe');console.log(zindexindex)}}
     >
-      <div className='absolute h-5/6 w-4/6 bg-black flex-col' >
-        <div className='titlebar'  style={{backgroundColor: 'grey', color:'white', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}}>
+      <div className='absolute h-5/6 w-4/6 bg-black flex-col' style={{zIndex:  (zindexindex.AboutMe.toString()) }}>
+        <div className='titlebar'  style={{ backgroundColor: 'grey', color:'white', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}}>
                    
                    <h1 className='text-center flex-auto'>About Me</h1>
                    <h1 className='hover:cursor-pointer ' onClick={()=>{handleClose()}}>❌</h1>

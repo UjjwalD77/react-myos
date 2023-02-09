@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AboutComp() {console.log('ABoutComp callled')
+function AboutComp() {
 
 return (
       <div className='bg-gray-900 w-4/5 flex'>

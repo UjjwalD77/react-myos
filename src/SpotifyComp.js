@@ -3,7 +3,7 @@ import Draggable from 'react-draggable'
 import { UserContext } from './context';
 
 export default function Spotify() {
-    const {setShowSpotify} = useContext(UserContext);
+    const {setShowSpotify,zindexindex,updatezindexindex } = useContext(UserContext);
     const handleClose = () => {
         setShowSpotify(false);
     }
@@ -11,8 +11,9 @@ export default function Spotify() {
         <Draggable
         bounds="parent"
         handle=".titlebar"
+        onMouseDown={()=>{updatezindexindex('Spotify')}}
        >
-            <div className='h-5/6 w-4/6 absolute'>
+            <div className='h-5/6 w-4/6 absolute' style={{zIndex:  (zindexindex.Spotify.toString()) }}>
                 <div className='titlebar'  style={{backgroundColor: 'lightgreen', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
                    
                  <h1 className='text-center flex-auto'>Spotify</h1>
