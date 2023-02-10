@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-myos/static/css/main.82a51811.css",
+    "main.js": "/react-myos/static/js/main.b682d95c.js",
+    "static/js/787.af0fa98a.chunk.js": "/react-myos/static/js/787.af0fa98a.chunk.js",
+    "static/media/maldives.jpg": "/react-myos/static/media/maldives.2c68f3ec8bc868abb018.jpg",
+    "static/media/nerd.jpg": "/react-myos/static/media/nerd.88314b76388fd1183ad5.jpg",
+    "static/media/tajmahal.jpg": "/react-myos/static/media/tajmahal.7042a0fd5b92b07c1c76.jpg",
+    "static/media/birdy.jpg": "/react-myos/static/media/birdy.73916cd51eeb2d45358a.jpg",
+    "static/media/zaza.jpg": "/react-myos/static/media/zaza.8452e1241c51f88d44e3.jpg",
+    "static/media/skull.jpg": "/react-myos/static/media/skull.df944f2b27e6797b00c7.jpg",
+    "static/media/setting.png": "/react-myos/static/media/setting.8b2ed1aaa0a208e614b3.png",
+    "index.html": "/react-myos/index.html",
+    "main.82a51811.css.map": "/react-myos/static/css/main.82a51811.css.map",
+    "main.b682d95c.js.map": "/react-myos/static/js/main.b682d95c.js.map",
+    "787.af0fa98a.chunk.js.map": "/react-myos/static/js/787.af0fa98a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82a51811.css",
+    "static/js/main.b682d95c.js"
+  ]
+}
