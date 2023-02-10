@@ -1,7 +1,7 @@
 {
   "name": "myos",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://ujjwald77.github.io/react-myos",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
