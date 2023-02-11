@@ -4,22 +4,29 @@ import { useContext } from 'react';
 
 const settingsIcon = require('./assests/icons/setting.png');
 function Dock() {
-  const{setShowSettings} = useContext(UserContext);
+  const{setShowSettings, setShowContactMe, setShowVscode} = useContext(UserContext);
   const handleSettings = () => {
     setShowSettings(true);
+  }
+  const handleContactMe = () => {
+    setShowContactMe(true);
+  }
+  const handleVsCode = () => {
+    setShowVscode(true);
   }
 
   return (
     // <div className='flex h-screen bg-blue-600' >
-        <div className='bg-black border-2 border-white flex border-b-0 rounded-md  text-slate-50 mt-auto ml-auto mr-auto'>
+        <div className='flex mt-auto mb-0 ml-auto mr-auto border-2 border-b-0 border-gray-200 rounded-bl-none rounded-br-none rounded-2xl bg-cyan-900 text-slate-50 '>
 
-            <div className='' onClick={handleSettings}><img src="https://cdn-icons-png.flaticon.com/512/4015/4015801.png" className='h-10' ></img>
+            <div className='flex flex-col-reverse p-2 pb-1' onClick={handleSettings}><img src="https://cdn-icons-png.flaticon.com/512/4015/4015801.png" title='Settings' className='w-8 h-8 hover:h-10 hover:w-10'  ></img>
             </div>
-
-            <div className=''>⚙️
+            <div className='flex flex-col-reverse p-2 pb-1' onClick={handleContactMe}><img src="https://cdn-icons-png.flaticon.com/512/7979/7979615.png" title='Contact Me' className='w-8 h-8 hover:h-10 hover:w-10' ></img>
             </div>
-            <div className=''>⚙️
+            <div className='flex flex-col-reverse p-2 pb-1' onClick={handleVsCode}><img src="https://cdn.iconscout.com/icon/free/png-512/vscode-4069952-3365471.png" title='VS Code' className='w-8 h-8 hover:h-10 hover:w-10' ></img>
             </div>
+            
+            
             <div className=''>⚙️
             </div>
         </div>

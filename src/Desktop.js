@@ -7,11 +7,12 @@ import Spotify  from './SpotifyComp';
 import AboutMe from './AboutMe';
 import CMDComp from './CmdComp';
 import ContactMe from './ContactMe';
+import VsCode from './Vscode';
 
 
 function Desktop() {
   const {curWallpaper} = useContext(UserContext);
-  const {showSpotify,setShowSpotify,showAboutMe,setShowAboutMe,showSettings, showCMD, setShowCMD, showContactMe, setShowContactMe} = useContext(UserContext);
+  const {showVscode,showSpotify,setShowSpotify,showAboutMe,setShowAboutMe,showSettings, showCMD, setShowCMD, showContactMe, setShowContactMe} = useContext(UserContext);
 
   console.log(showSettings);
 
@@ -32,11 +33,12 @@ function Desktop() {
     <div class=" w-screen h-screen flex  bg-blue-500"
      style={{ backgroundImage: `url(${curWallpaper})`, backfaceVisibility: 'visible', backgroundSize: "cover"}}>
         <div className='flex flex-col '>
-          <div className='h-20 w-20 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenSpotify()}} ><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify" ></img>Spotify</div>
-          <div className='h-20 w-20 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  align-middle justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenAboutMe()}} ><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/5082/5082720.png" alt="About Me"></img>About Me</div>
-          <div className='h-20 w-20 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenCMD()}}><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/7207/7207841.png" alt="CMD"></img>Cmd</div>
-          <div className='h-20 w-20 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenContactMe()}}><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/7979/7979615.png" alt="Contact Me"></img>Contact Me</div>
+          <div className='h-19 w-22 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:bg-slate-900 hover:bg-opacity-10   justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenSpotify()}} ><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify" ></img>Spotify</div>
+          <div className='h-19 w-22 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:bg-slate-900 hover:bg-opacity-10   justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenAboutMe()}} ><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/5082/5082720.png" alt="About Me"></img>About Me</div>
+          <div className='h-19 w-22 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:bg-slate-900 hover:bg-opacity-10   justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenCMD()}}><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/7207/7207841.png" alt="CMD"></img>Cmd</div>
+          <div className='h-19 w-22 text-white font drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:bg-slate-900 hover:bg-opacity-10   justify-center text-center mb-3 ml-3 hover:cursor-pointer flex flex-col mt-3' onDoubleClick={()=>{handleOpenContactMe()}}><img  style={{alignSelf: 'center', height: '8vmin'}}  src="https://cdn-icons-png.flaticon.com/512/7979/7979615.png" alt="Contact Me"></img>Contact Me</div>
         </div>
+        {showVscode && <VsCode/>}
         {showContactMe && <ContactMe/>}
         {showCMD && <CMDComp/>}
         {showAboutMe  && <AboutMe/>}

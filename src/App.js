@@ -11,7 +11,8 @@ function App() {
     'AboutMe': 0,
     'Spotify': 0,
     'CMD': 0,
-    'ContactMe': 0
+    'ContactMe': 0,
+    'VsCode': 0
   }
   const [zindexindex, setzindexindex] = useState(initialzindexindex);
   const [showSettings, setShowSettings] = useState(false);
@@ -19,6 +20,7 @@ function App() {
   const [showSpotify, setShowSpotify] = useState(false);
   const [showAboutMe, setShowAboutMe] = useState(false);
   const [showCMD, setShowCMD] = useState(false);
+  const [showVscode, setShowVscode] = useState(false);
   const [showContactMe, setShowContactMe] = useState(false);
   const updatezindexindex = (name) => {
     let newzindexindex = {...initialzindexindex};
@@ -27,7 +29,7 @@ function App() {
   }
   return (
     <>
-      <UserContext.Provider value={{showContactMe,setShowContactMe,zindexindex,updatezindexindex,showSettings, setShowSettings, curWallpaper, setCurWallpaper,showSpotify, setShowSpotify,showAboutMe, setShowAboutMe, showCMD, setShowCMD}}>
+      <UserContext.Provider value={{showVscode, setShowVscode, showContactMe,setShowContactMe,zindexindex,updatezindexindex,showSettings, setShowSettings, curWallpaper, setCurWallpaper,showSpotify, setShowSpotify,showAboutMe, setShowAboutMe, showCMD, setShowCMD}}>
         <Paths />
       </UserContext.Provider>
     </>
