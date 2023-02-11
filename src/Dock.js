@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 const settingsIcon = require('./assests/icons/setting.png');
 function Dock() {
-  const{setShowSettings, setShowContactMe, setShowVscode} = useContext(UserContext);
+  const{setShowMaps, setShowSettings, setShowContactMe, setShowVscode} = useContext(UserContext);
   const handleSettings = () => {
     setShowSettings(true);
   }
@@ -13,6 +13,9 @@ function Dock() {
   }
   const handleVsCode = () => {
     setShowVscode(true);
+  }
+  const handleMaps = () => {
+    setShowMaps(true);
   }
 
   return (
@@ -25,10 +28,11 @@ function Dock() {
             </div>
             <div className='flex flex-col-reverse p-2 pb-1' onClick={handleVsCode}><img src="https://cdn.iconscout.com/icon/free/png-512/vscode-4069952-3365471.png" title='VS Code' className='w-8 h-8 hover:h-10 hover:w-10' ></img>
             </div>
-            
-            
-            <div className=''>⚙️
+            <div className='flex flex-col-reverse p-2 pb-1' onClick={handleMaps}><img src="https://cdn-icons-png.flaticon.com/512/2335/2335353.png" title='Maps' className='w-8 h-8 hover:h-10 hover:w-10' ></img>
             </div>
+            
+            
+            
         </div>
     // </div>
   )

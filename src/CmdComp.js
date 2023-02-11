@@ -4,7 +4,7 @@ import { UserContext } from './context';
 import { useContext } from 'react';
 
 function CmdComp() {
-    const {setShowCMD} = useContext(UserContext);
+    const {setShowCMD,zindexindex, updatezindexindex} = useContext(UserContext);
 
     const handleClose = () => {
         setShowCMD(false);
@@ -12,11 +12,12 @@ function CmdComp() {
   return (
     <Draggable
     bounds="parent"
+    onMouseDown={()=>{updatezindexindex('CMD')}}
     >
-        <div className='h-4/6 w-2/6 bg-black bg-opacity-80 absolute' >
-            <div className='bg-gray-800 text-white text-center flex flex-row '>
+        <div className='absolute w-2/6 bg-black h-4/6 bg-opacity-80' style={{zIndex:  (zindexindex.CMD.toString()) }}>
+            <div className='flex flex-row text-center text-white bg-gray-800 '>
                 <h1 className='m-auto'>Command Prompt</h1>
-                <h1 className='hover: cursor-pointer' onClick={()=>handleClose()}>❌</h1>
+                <h1 className='cursor-pointer hover:' onClick={()=>handleClose()}>❌</h1>
             </div>
             
         </div>
