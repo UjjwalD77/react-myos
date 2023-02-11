@@ -6,7 +6,7 @@ import Dock from "./Dock";
 function Paths() {
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}> 
       <Routes>
         <Route path="/" element={<LockScreen />} />
         <Route path="/desktop" element={<Desktop />} />
