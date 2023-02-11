@@ -16,7 +16,7 @@ export default function Maps() {
             <div className='absolute w-4/6 h-5/6' style={{zIndex:  (zindexindex.Maps.toString()) }}>
                 <div className='titlebar'  style={{backgroundColor: 'blue', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
                    
-                 <h1 className='flex-auto text-center'>Google Maps</h1>
+                 <h1 className='flex-auto text-center text-white'>Google Maps</h1>
                  <h1 className='hover:cursor-pointer ' onClick={()=>{handleClose()}}>❌</h1>
                 </div>
                 {/* <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0"  src="https://zv1y2i8p.play.gamezop.com/g/p7HOjYF4O"> </iframe> */}
