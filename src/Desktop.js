@@ -2,7 +2,7 @@ import React from 'react'
 import Dock from './Dock'
 import Settings from './settings';
 import { UserContext } from './context';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Spotify  from './SpotifyComp';
 import AboutMe from './AboutMe';
 import CMDComp from './CmdComp';
@@ -17,8 +17,8 @@ import NerdComp from './NerdComp';
 function Desktop() {
   const {curWallpaper} = useContext(UserContext);
   const {showNerd, setShowNerd, showRacingGame, setShowRacingGame, showMaps, showVscode,showSpotify,setShowSpotify,showAboutMe,setShowAboutMe,showSettings, showCMD, setShowCMD, showContactMe, setShowContactMe} = useContext(UserContext);
-  
-  console.log(showSettings);
+
+
 
 
   const handleOpenSpotify = () => {
@@ -42,6 +42,7 @@ function Desktop() {
   const handleOpenimpfiles = () => {
     
   }
+
   
   return (
     <div class="absolute w-screen h-screen flex bg-blue-500 justify-between  "

@@ -71,7 +71,7 @@ const ResumeComp = () => {
     return(
       <div className='flex flex-col w-4/5 bg-gray-900 '>
       {/* <embed className="h-full w-full"  src="myresume.pdf" id='embed1' ></embed> */}
-    <iframe className="h-full w-full" src={'https://drive.google.com/file/d/1MgUiRrX2-BtRVgZAj9CtK7-GVAqhYpkk/preview?usp=drivesdk'} title="Ujjwal Devre Resume" ></iframe>  
+    <iframe className="h-full w-full" loading='eager' src={'https://drive.google.com/file/d/1MgUiRrX2-BtRVgZAj9CtK7-GVAqhYpkk/preview?usp=drivesdk'} title="Ujjwal Devre Resume" ></iframe>  
       </div>
     )
 }

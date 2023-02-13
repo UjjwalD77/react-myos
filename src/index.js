@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "@firefox-devtools/react-contextmenu";
 import { UserContext } from './context';
 import { useContext } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const handleEnterFullScreen = () => {
   document.body.requestFullscreen();
@@ -15,8 +15,13 @@ const handleExitFullScreen = () => {
   document.exitFullscreen();
 }
 const HandleShowWallpaper = () => {
-  const { setShowSettings } = useContext(UserContext);
+  const {setShowSettings,showSettings} =  useContext(UserContext);
   setShowSettings(true);
+  console.log(showSettings)
+}
+const HandleLockScreen = () => {
+  const navigate = useNavigate();
+  navigate('/');
 }
 root.render(
   <React.StrictMode>
@@ -37,10 +42,15 @@ root.render(
         <MenuItem data={{foo: 'bar'}} hideOnLeave="true" className="p-1 cursor-pointer hover:" onClick={()=>handleExitFullScreen()}>
         Exit Full Screen
         </MenuItem>
-        <MenuItem divider />
-        <MenuItem data={{foo: 'bar'}} hideOnLeave="true" className="p-1 cursor-pointer hover:" onClick={()=>HandleShowWallpaper()}>
+        {/* <MenuItem data={{foo: 'bar'}} hideOnLeave="true" className="p-1 cursor-pointer hover:" onClick={()=>HandleShowWallpaper()}>
           Change Wallpaper
         </MenuItem>
+        <MenuItem data={{foo: 'bar'}} hideOnLeave="true" className="p-1 cursor-pointer hover:" onClick={()=>{
+          const navigate = useNavigate();
+          navigate('/');
+          }}>
+          Lock Screen
+        </MenuItem> */}
       </ContextMenu>
       
   </React.StrictMode>
