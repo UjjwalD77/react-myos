@@ -2,7 +2,7 @@ import Paths from "./Paths";
 import { useState } from "react";
 import { UserContext } from './context';
 import { useEffect } from "react";
-const zaza = require('./assests/wallpapers/zaza.jpg');
+const zaza = require('./assets/wallpapers/zaza.jpg');
 
 function App() {
 

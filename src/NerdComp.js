@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import Draggable from 'react-draggable'
 import { UserContext } from './context';
-const nerdvid = require('./assests/media/nerd.mp4');
+const nerdvid = require('./assets/media/nerd.mp4');
 
 export default function NerdComp() {
     const {setShowNerd,zindexindex,updatezindexindex } = useContext(UserContext);

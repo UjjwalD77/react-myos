@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { UserContext } from './context';
 
-const tajmahal = require('./assests/wallpapers/tajmahal.jpg');
-const skull = require('./assests/wallpapers/skull.jpg');
-const birdy = require('./assests/wallpapers/birdy.jpg');
-const nerd = require('./assests/wallpapers/nerd.jpg');
-const maldives = require('./assests/wallpapers/maldives.jpg');
-const zaza = require('./assests/wallpapers/zaza.jpg');
+const tajmahal = require('./assets/wallpapers/tajmahal.jpg');
+const skull = require('./assets/wallpapers/skull.jpg');
+const birdy = require('./assets/wallpapers/birdy.jpg');
+const nerd = require('./assets/wallpapers/nerd.jpg');
+const maldives = require('./assets/wallpapers/maldives.jpg');
+const zaza = require('./assets/wallpapers/zaza.jpg');
 
 
 

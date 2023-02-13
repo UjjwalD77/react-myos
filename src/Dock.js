@@ -2,7 +2,7 @@ import React from 'react'
 import { UserContext } from './context';
 import { useContext } from 'react';
 
-const settingsIcon = require('./assests/icons/setting.png');
+const settingsIcon = require('./assets/icons/setting.png');
 function Dock() {
   const{setShowMaps, setShowSettings, setShowContactMe, setShowVscode} = useContext(UserContext);
   const handleSettings = () => {
