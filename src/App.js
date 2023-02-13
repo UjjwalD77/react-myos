@@ -1,6 +1,7 @@
 import Paths from "./Paths";
 import { useState } from "react";
 import { UserContext } from './context';
+import { useEffect } from "react";
 const zaza = require('./assests/wallpapers/zaza.jpg');
 
 function App() {
@@ -32,9 +33,10 @@ function App() {
     newzindexindex[name] = 10;
     setzindexindex(newzindexindex);
   }
+  
   return (
-    // <div >
-    <div onContextMenu={(e)=> e.preventDefault()}>
+    <div >
+     {/* <div onContextMenu={(e)=> e.preventDefault()}> */}
       <UserContext.Provider value={{showNerd, setShowNerd, showRacingGame, setShowRacingGame, showMaps, setShowMaps, showVscode, setShowVscode, showContactMe,setShowContactMe,zindexindex,updatezindexindex,showSettings, setShowSettings, curWallpaper, setCurWallpaper,showSpotify, setShowSpotify,showAboutMe, setShowAboutMe, showCMD, setShowCMD}}>
         <Paths />
       </UserContext.Provider>

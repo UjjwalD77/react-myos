@@ -1,14 +1,17 @@
 import React from 'react'
 import Draggable from 'react-draggable'
 import { UserContext } from './context';
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 
 import MessageApi from './MessageApi';
 const ContactMe = () => {
-    const {setShowContactMe} = useContext(UserContext);
-
+    const {setShowContactMe,zindexindex,updatezindexindex} = useContext(UserContext);
+    const [isMaximize, setIsMaximize] = useState(false);
     const handleClose = () => {
         setShowContactMe(false);
+    }
+    const handleChangeSize = () => {
+        setIsMaximize(prev=>!prev);
     }
     const handleSend = () =>{
         const name = document.getElementsByName('nameInput')[0].value;
@@ -21,11 +24,16 @@ const ContactMe = () => {
     <Draggable
     bounds="parent"
     handle='.titlebar'
+    onMouseDown={()=>{updatezindexindex('ContactMe');console.log(zindexindex)}}
+
     >
 
-    <div className='absolute flex flex-col justify-center w-4/6 bg-gradient-to-br from-green-700 to-blue-600 h-4/6 '>
+    <div className= {isMaximize ? 'absolute flex flex-col justify-center w-screen h-screen bg-gradient-to-br from-green-700 to-blue-600  ':
+                'absolute flex flex-col justify-center w-4/6 bg-gradient-to-br from-green-700 to-blue-600 h-4/6 '} style={{zIndex:  (zindexindex.ContactMe.toString()) }}
+            >
         <div className='titlebar' style={{backgroundColor:'grey', padding: 1, color: 'white', textAlign: 'center', display: 'flex', flexDirection: 'row'}}>
             <h1 className='m-auto' >Contact Me </h1>
+            <h1 className='hover:cursor-pointer' onClick={()=> handleChangeSize()} >🔳 </h1>
             <h1 className='hover:cursor-pointer' onClick={()=> handleClose()} >❌ </h1>
         </div>
         <div className='flex flex-col justify-center w-full h-full m-auto '>
