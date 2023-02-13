@@ -18,7 +18,7 @@ export default function VsCode() {
         onMouseDown={()=>{updatezindexindex('VsCode')}}
        >
             <div className= {isMaximize?'absolute w-screen h-screen flex flex-col': 'absolute w-4/6 h-5/6'} style={{zIndex:  (zindexindex.VsCode.toString()) }}>
-                <div className='titlebar'  style={{backgroundColor: 'blue', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
+                <div className='titlebar'  style={{backgroundColor: 'blue', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}}>
                    
                  <h1 className='flex-auto text-center'>Unofficial Code Editor</h1>
                  <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>

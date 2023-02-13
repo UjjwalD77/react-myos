@@ -18,7 +18,7 @@ export default function RacingGame() {
         onMouseDown={()=>{updatezindexindex('RacingGame')}}
        >
             <div className={isMaximize?'absolute flex flex-col h-full w-full':'absolute w-4/6 h-5/6'} style={{zIndex:  (zindexindex.RacingGame.toString()) }}>
-                <div className='titlebar'  style={{backgroundColor: 'blue', minHeight: '25px', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
+                <div className='titlebar'  style={{backgroundColor: 'blue', minHeight: '25px', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}}>
                    
                  <h1 className='flex-auto text-center text-white'>Racing Game</h1>
                  <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>

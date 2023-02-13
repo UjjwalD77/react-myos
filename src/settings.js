@@ -23,7 +23,7 @@ function Settings() {
     onMouseDown={()=>{updatezindexindex('Settings');console.log(zindexindex)}}>
 
       <div className={isMaximize?' absolute flex flex-col h-screen w-screen':'absolute h-5/6 w-4/6 bg-black flex-col'} style={{zIndex:  (zindexindex.Settings.toString()) }}>
-        <div className='titlebar' style={{backgroundColor: 'grey', color:'white', minHeight: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}} onDoubleClick={()=>handleChangeSize()} >
+        <div className='titlebar' style={{backgroundColor: 'grey', color:'white', minHeight: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}} onDoubleClick={()=>handleChangeSize()} >
                    
                    <h1 className='text-center flex-auto'>Settings</h1>
                    <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>

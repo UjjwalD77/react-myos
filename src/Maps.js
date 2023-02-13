@@ -18,7 +18,7 @@ export default function Maps() {
         onMouseDown={()=>{updatezindexindex('Maps')}}
        >
             <div className={isMaximize?'absolute flex flex-col w-screen h-screen':'absolute w-4/6 h-5/6'} style={{zIndex:  (zindexindex.Maps.toString()) }}>
-                <div className='titlebar'  style={{backgroundColor: 'blue', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
+                <div className='titlebar'  style={{backgroundColor: 'blue', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}}>
                    
                  <h1 className='flex-auto text-center text-white'>Google Maps</h1>
                  <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>

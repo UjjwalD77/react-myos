@@ -5,8 +5,9 @@ import axios from "axios";
 const MessageApi = async(name,email,contactno,message) => {
     console.log(name,email,contactno,message);
     //I know i exposed it but i dont care
-    const webhook = "https://discord.com/api/webhooks/1073441239518679040/0ID_9xZlevtfCX_Yap_FPNnNMg8_G99H3zMiDEIUmdiuIO-zyB18xQiawqocy9_7emRW" 
- 
+    const b64weebhook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3MzQ0MTI0MzMyNzExNTI4NC9EMnJUZHo3aE52UFNpdDRBbmU3aVhpOUozREtGSjlNOUVlbkF6MTR6VHhhTjFrS2x2LXVlYU5SMTRaZmpYMF9KYVFEUw" 
+    // const b64weebhook = "pdDRBbmU3aVhpOUozREtGSjlNOUVlbkF6MTR6VHhhTjFrS2x2LXVlYU5SMTRaZmpYMF9KYVFEUw" 
+    
     let mystring = `Name: ${name} \nEmail: ${email} \nContact No: ${contactno} \nMessage: ${message}`;
     console.log(mystring)
     const data = {
@@ -14,7 +15,7 @@ const MessageApi = async(name,email,contactno,message) => {
     }
         try{
 
-            const response = await axios.post(webhook, data, {
+            const response = await axios.post(atob(b64weebhook), data, {
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -25,6 +26,7 @@ const MessageApi = async(name,email,contactno,message) => {
             }
         }
         catch(err){
+            console.log(err)
             return false;
         }
         return false;

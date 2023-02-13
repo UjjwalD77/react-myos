@@ -219,7 +219,7 @@ const EducationComp = () => {
     onMouseDown={()=>{updatezindexindex('AboutMe');console.log(zindexindex)}}
     >
       <div className={isMaximize?'absolute flex flex-col w-screen h-screen':'absolute flex-col w-4/6 bg-black h-5/6'} style={{zIndex:  (zindexindex.AboutMe.toString()) }}>
-        <div className='titlebar' onDoubleClick={()=>handleChangeSize()} style={{ backgroundColor: 'grey', color:'white', minHeight: '25px', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row'}}>
+        <div className='titlebar' onDoubleClick={()=>handleChangeSize()} style={{ backgroundColor: 'grey', color:'white', minHeight: '25px', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}}>
                    
                    <h1 className='flex-auto text-center'>About Me</h1>
                    <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>

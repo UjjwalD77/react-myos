@@ -19,7 +19,7 @@ export default function Spotify() {
         onMouseDown={()=>{updatezindexindex('Spotify')}}
        >
             <div className={isMaximize?'flex flex-col h-screen w-screen absolute':'h-5/6 w-4/6 absolute'} style={{zIndex:  (zindexindex.Spotify.toString()) }}>
-                <div className='titlebar'  style={{backgroundColor: 'lightgreen', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row',}}>
+                <div className='titlebar'  style={{backgroundColor: 'lightgreen', height: '4vmin', textAlign: 'center', letterSpacing: 2, fontWeight:'bold', display:'flex', flexDirection:'row', alignItems:'center'}}>
                    
                  <h1 className='text-center flex-auto'>Spotify</h1>
                  <h1 className='hover:cursor-pointer ' onClick={()=>{handleChangeSize()}}>🔳</h1>
