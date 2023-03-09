@@ -115,6 +115,20 @@ const ProjectsComp = () => {
               </div>
             </div>
             <div className='p-2 hover:m-0 m-4 hover:shadow-2xl hover:shadow-blue-500 align-middle border-2 border-white rounded-lg hover:cursor'>
+              <div className='flex flex-row text-xl text-white ' >Sorting Algorithm Visualizer
+              <a href='https://github.com/UjjwalD77/react-sorting-algo-visualizer' target="_blank" >
+              <img src='https://img.shields.io/badge/GitHub-1000?style=for-the-badge&logo=github&logoColor=white' alt="github" className='ml-6'></img>
+              </a>
+                <h1 className='ml-auto'>February 2023</h1>
+                </div>
+              <li className='ml-4 text-white text-l' >A sorting algorithm visualizer with multiple algorithms</li>
+              <li className='ml-4 text-white text-l' >Made with React.js</li>
+              <div className='flex flex-row text-white'>
+                <div className='p-1 pl-3 pr-3 m-2 border-2 rounded-3xl' >React.js</div>
+                <div className='p-1 pl-3 pr-3 m-2 border-2 rounded-3xl' >Tailwind</div>
+              </div>
+            </div>
+            <div className='p-2 hover:m-0 m-4 hover:shadow-2xl hover:shadow-blue-500 align-middle border-2 border-white rounded-lg hover:cursor'>
               <div className='flex flex-row text-xl text-white ' >H-Man 
               <a href='https://github.com/UjjwalD77/H-Man' target="_blank" >
               <img src='https://img.shields.io/badge/GitHub-1000?style=for-the-badge&logo=github&logoColor=white' alt="github" className='ml-6'></img>
